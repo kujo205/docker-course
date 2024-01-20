@@ -1,13 +1,8 @@
-FROM node:14
+FROM python
 
 WORKDIR /app
 
-COPY package.json /app
-
-RUN npm install
-
 COPY . /app
 
-EXPOSE 80
+CMD ["python", "rng.py"]
 
-CMD ["node", "server.js"]
