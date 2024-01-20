@@ -22,6 +22,8 @@ command, it starts container in the foreground (aka attached pr blocking mode)
 
 you can run a container in a detached mode, use -d flag
 
+you can also remove a container after it is stop using --rm flag
+
 ```bash
 docker run -p <port-container-can-be-connected-by><port-container-listens-to> -d <container-name>
 ```
