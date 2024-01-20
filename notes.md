@@ -38,3 +38,44 @@ docker logs <container-name>
 ```
 command
 
+
+# Removing containers and images
+
+To delete a container use 
+```bash
+docker rm <container-name>
+```
+command
+
+
+!IMPORTANT note
+You cannot rm a running container, use docker stop beforehand
+
+
+
+To delete an image use 
+```bash
+docker rmi <image-id>
+```
+command
+
+
+!IMPORTANT note
+You cannot rmi an image, used by some container, rm the container first
+
+## You can delete all the unused images using 
+
+```bash
+docker image prune 
+```
+command
+
+
+# Listing all the images
+
+You can list all images using
+
+```bash
+docker images
+```
+
