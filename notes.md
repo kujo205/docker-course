@@ -1,4 +1,6 @@
-# SHaring images 
+# Sharing images 
+
+## Pushing your image to the remote
 
 In order to chare your docker image you have to 
 1. sign up on docker hub
@@ -21,3 +23,13 @@ this effectively creates a copy of your image with appropriate name
 docker push <imgage-name>
 ```
 command
+
+
+## Using remote images
+
+In order to use remote images run 
+
+```bash
+docker pull <image-name>
+```
+
