@@ -68,7 +68,7 @@ You cannot rmi an image, used by some container, rm the container first
 ## You can delete all the unused images using 
 
 ```bash
-docker image prune 
+docker image prune -a 
 ```
 command
 
