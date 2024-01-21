@@ -81,3 +81,43 @@ You can list all images using
 docker images
 ```
 
+You can inspect the image using 
+```bash 
+docker image inspect <image-id>
+```
+
+
+# Copying while running the container 
+
+You can copy some files into the container from the fs or into the fs from the container, while running docker container in detached mode
+
+In order to do this use 
+
+```bash
+docker cp <source> <destination>
+```
+command , e.g.
+
+```bash
+docker cp some_dummy_folder_on_my_pc/. flaky_lake:/some_folder_in_a_container
+```
+
+This effectively copies contents of `some_dummt_folder_on_my_pc` into the folder `some_dummy_folder_in_a_continer` in `flaky_lake` container
+
+
+
+# Container and image naming
+
+To run a container and give it a name you can use 
+
+```bash
+docker run --name <your_chosen_name> <image-id/image-name>
+```
+
+To run build an image with some specific name u can use 
+
+```bash
+docker build -t <image-name>:<tag-name>
+```
+
+Tags are useful if you want to specify the version of that image
