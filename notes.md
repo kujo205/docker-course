@@ -33,3 +33,6 @@ In order to use remote images run
 docker pull <image-name>
 ```
 
+!IMPORTANT note
+
+Images are not updated automaticallt, you have to run docker pull with the image name in order to have the latest version of image used by a container
