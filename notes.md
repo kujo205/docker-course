@@ -58,3 +58,17 @@ docker run -v feedback:/app/feedback
 ```
 
 They are better since they persis the data after container is removed
+
+
+
+# Removal of anonymous volumes,
+Anonymous volumes would't be removed if you remove a container manually, 
+You can remeove volumes manully by running
+
+```bash
+docker volume rm <volume_name>
+```
+
+
+
+
