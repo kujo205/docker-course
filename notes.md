@@ -103,3 +103,30 @@ docker run -p 3000:80 -v /home/kujo205/WebstormProjects/docker-course:/app:ro -v
 ```
 
 Yet, if you want some parts of your container to be wrirtable, simply put em in an anonymous container or a couple of anonymous containers
+
+## How to see more details about the volume
+
+In order to see details about the volume you can run 
+
+```bash
+docker volume inspect <volume-name>
+```
+
+this will list something like 
+
+```bash
+kujo205@debian  ~/WebstormProjects/docker-course   demo4  docker volume inspect feedback
+[
+    {
+        "CreatedAt": "2024-01-23T13:27:56Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/feedback/_data",
+        "Name": "feedback",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+```
+
+It's important to note that the path or `Mountpoint` specified in this system is not a path in your machine, but a path in a virtual machine, which docker uses under the hood
