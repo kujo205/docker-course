@@ -161,3 +161,32 @@ docker run --env-file <path-to-env-file> <some-container-name>
 ```
 
 
+## Build arguments
+
+There is other type of variables  in docker, these are called build-args
+
+You can have a build arg in your Dockerfile by specifying it in the following way
+
+```Dockerfile
+ARG <arg-name>=<arg-value> 
+```
+
+And then you can use your build args by prepending $ before a build arg, e.g.
+
+```Dockerfile
+ENV PORT $DEFAULT_PORT
+```
+
+you can specify build arguments in thr docker run command like this
+
+```bash
+docker run --build-arg DEFAULT_PORT=8000 <some-container-name>
+```
+
+You can specify multiple build args
+
+
+## Dockerignore
+Alike to gitignore, it tells docker which filed not to include to the image
+
+You'll often see there things like .env files, node_modules etc.
