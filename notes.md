@@ -94,4 +94,12 @@ You can easily tell docker which files to not overwrite by specifying an anonymo
 docker run -p 3000:80 -v /home/kujo205/WebstormProjects/docker-course:/app -v /app/node_modules --rm -d --name bind-mount-and-anonymous-volumes demo4:latest
 ```
 
+## Disabling changing files in a container
 
+You can easily modify the command above to allow read-only access to a container, this is done by addding `ro` at the end of the container
+
+```bash
+docker run -p 3000:80 -v /home/kujo205/WebstormProjects/docker-course:/app:ro -v /app/node_modules --rm -d --name bind-mount-and-anonymous-volumes demo4:latest
+```
+
+Yet, if you want some parts of your container to be wrirtable, simply put em in an anonymous container or a couple of anonymous containers
