@@ -130,3 +130,34 @@ kujo205@debian  ~/WebstormProjects/docker-course   demo4  docker vol
 ```
 
 It's important to note that the path or `Mountpoint` specified in this system is not a path in your machine, but a path in a virtual machine, which docker uses under the hood
+
+
+## Environmental values
+
+You can pass env values to the docker container, in order to do that use the following syntax in your docker file
+```Dockerfile
+ENV <VARIABLE_NAME> <DEFAULT_VALUE>
+``` 
+
+The next question you may ask is how to pass those variables to the container itself, well, it's easy, 
+You need to specify long option `--env` and the `variable` with the `value`.
+Like in the following code
+
+```bash
+docker run --env PORT=8000 <some-container-name>
+```
+
+or use the shortcut version
+
+```bash
+docker run -e PORT=8000 <some-container-name>
+```
+
+
+Besides this you can specify env file, the syntax is the following
+
+```bash
+docker run --env-file <path-to-env-file> <some-container-name>
+```
+
+

@@ -44,4 +44,6 @@ app.post('/create', async (req, res) => {
   });
 });
 
-app.listen(80);
+app.listen(process.env.PORT);
+
+console.log("Listening on port ",process.env.PORT)
