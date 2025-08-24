@@ -32,6 +32,11 @@ services:
     
     volumes:
       - ./frontend/:/app
+    tty: true
+    stdin_open: true
+    depends_on:
+      - backend
+  
 
 volumes:
   data:
